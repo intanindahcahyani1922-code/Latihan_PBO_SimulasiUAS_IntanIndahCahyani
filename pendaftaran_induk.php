@@ -19,7 +19,29 @@ abstract class Pendaftaran {
         $this->biayaPendaftaranDasar = $biayaDasar;
     }
 
-    // Metode Abstrak (Tanpa Isi/Body) yang wajib diturunkan ke kelas anak
+    // ================= Tambahkan Fungsi Getter di Bawah Ini =================
+    public function getId() {
+        return $this->id_pendaftaran;
+    }
+
+    public function getNama() {
+        return $this->nama_calon;
+    }
+
+    public function getAsal() {
+        return $this->asal_sekolah;
+    }
+
+    public function getNilai() {
+        return $this->nilai_ujian;
+    }
+
+    public function getBiayaDasar() {
+        return $this->biayaPendaftaranDasar;
+    }
+    // =========================================================================
+
+    // Metode Abstrak (Tanpa Isi/Body) yang wajib diturnkan ke kelas anak
     abstract public function hitungTotalBiaya();
     abstract public function tampilkanInfoJalur();
 }
